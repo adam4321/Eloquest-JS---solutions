@@ -1,0 +1,165 @@
+// Exercise 1 - Triangle
+
+// Doesn't work
+for (let i=0; i =7; i++) {
+    let sym = "#";
+    sym = sym + "#"; 
+    console.log(sym);
+}
+
+// Doesn't work
+ let counter = 1;
+ while (counter <=7) {
+  console.log("" + "#");
+ }
+
+// Brute Force
+console.log("#");
+console.log("#" + "#");
+console.log("#" + "#" + "#");
+console.log("#" + "#" + "#" + "#");
+console.log("#" + "#" + "#" + "#" + "#");
+console.log("#" + "#" + "#" + "#" + "#" + "#");
+console.log("#" + "#" + "#" + "#" + "#" + "#" + "#");
+
+// This works
+
+let s = "#";
+let c = 1;
+
+while (c <=7) {
+  console.log(s);
+  s = s + "#";
+  c++;
+}
+
+// This works - with a for loop
+let x = "#";
+for (i = 1; i <= 7; i++) {
+    console.log(x);
+    x = x + "#";
+}
+
+// Exercise 2 - Fizz Buzz
+
+// Counter 1-100
+let y = 1;
+while (y <=100) {
+console.log(y);
+y++
+}
+
+
+if (y % 3 == 0){
+console.log(Fizz)
+}
+else if (y % 5 == 0){
+console.log(Buzz)
+}
+else {
+    console.log(y)
+}
+
+// Partial Solution = Fizz or Buzz
+for(let y=1; y <=100; y++){
+  if (y % 3 == 0){
+console.log("Fizz")
+}
+else if (y % 5 == 0){
+console.log("Buzz")
+}
+else {
+    console.log(y)
+}  
+}
+
+// Fizz Buzz - Solution
+
+for(let y=1; y <=100; y++){
+  if (y % 3 == 0 && y % 5 == 0){
+      console.log("Fizz Buzz")
+  }
+  else if (y % 3 == 0){
+console.log("Fizz")
+}
+  else if (y % 5 == 0){
+console.log("Buzz")
+}
+  else {
+    console.log(y)
+}  
+}
+
+// Exercise 3 - Chessboard
+
+// Brute Force
+console.log(" " + "#" + " " +  "#" + " " + "#" + " " + "#");
+console.log("#" + " " +  "#" + " " + "#" + " " + "#" + " ");
+console.log(" " + "#" + " " +  "#" + " " + "#" + " " + "#");
+console.log("#" + " " +  "#" + " " + "#" + " " + "#" + " ");
+console.log(" " + "#" + " " +  "#" + " " + "#" + " " + "#");
+console.log("#" + " " +  "#" + " " + "#" + " " + "#" + " ");
+console.log(" " + "#" + " " +  "#" + " " + "#" + " " + "#");
+console.log("#" + " " +  "#" + " " + "#" + " " + "#" + " ");
+
+// Brute Force 2 with newline character
+console.log(" # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # ");
+
+// Brute Force 3 with variable
+let s = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # "
+console.log(s);
+
+// Getting closer but only # and no spaces...???
+let a = "";
+let x = 8;
+let y = 8;
+
+
+for(let i = 1; i <=y; i++){
+    for(let j = 1; j <=x; j++){
+        if (i+j % 2 == 0){
+            a += " ";
+        }else {
+            a += "#";
+        }
+             
+          } a += "\n";
+    }console.log(a);
+
+// Solution
+
+let a = "";
+let x = 8;
+let y = 8;
+
+
+for(let i = 1; i <=y; i++){
+    for(let j = 1; j <=x; j++){
+        let h = i+j;
+        if (h % 2 == 0){
+            a += " ";
+        }else {
+            a += "#";
+        }
+             } a += "\n";
+    }console.log(a);
+
+// Solution - Different formatting but the same code
+
+let a = "";
+let x = 8;
+let y = 8;
+
+
+for (let i = 1; i <=y; i++){
+    for (let j = 1; j <=x; j++){
+        let h = i+j;
+        if (h % 2 == 0){
+            a += " ";
+        } else {
+            a += "#";
+        }
+             
+          } a += "\n";
+    }
+console.log(a);
