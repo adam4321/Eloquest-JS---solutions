@@ -1,0 +1,85 @@
+// Implement a 2 argument Math.min by hand
+
+function min(a,b){
+    if(a<b){
+        return a;
+    }else{
+        return b;
+    }
+};
+
+// Recursion
+
+//Doesn't work - Damn, maybe equality would be a better choice than assignment. Lol
+
+function isEven(n){
+   if(n=0){
+        return true;
+    }else if(n=1){
+        return false;
+    }else{
+        return find(n-2);
+    }
+};
+
+//This works for positive integers
+
+function isEven(n){
+ if(n==0){
+        return true;
+    }else if(n==1){
+        return false;
+    }else{
+        return isEven(n-2);
+    }
+};
+
+// Version that allows negative integers
+
+function isEven(n){
+    if(n<0){
+       n *= -1;
+    }
+    if(n==0){
+        return true;
+    }else if(n==1){
+        return false;
+    }else{
+        return isEven(n-2);
+    }
+};
+
+// Bean Counting
+
+//Misunderstood and returned array, so not it
+
+let x = ""
+function countBs(string){
+  for (let n = 0; n <string.length; n++){
+    if(string[n] === "B"){
+      x += string[n];
+    }
+  }return x;
+};
+
+//First Part's Solution
+
+let x = 0;
+function countBs(string){
+  for (let n = 0; n < string.length; n++){
+    if(string[n] === "B"){
+      x++;
+    }
+  }return x;
+};
+
+//Combined Solution
+
+let x = 0;
+function countChar(string, char){
+  for (let n = 0; n < string.length; n++){
+    if(string[n] === char){
+      x++;
+    }
+  }return x;
+};
