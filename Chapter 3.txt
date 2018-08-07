@@ -10,7 +10,7 @@ function min(a,b){
 
 // Recursion
 
-//Doesn't work - Damn, maybe equality would be a better choice than assignment. Lol
+//Doesn't work -  assignment instead of equality
 
 function isEven(n){
    if(n=0){
@@ -34,7 +34,7 @@ function isEven(n){
     }
 };
 
-// Version that allows negative integers
+// Version which allows negative integers
 
 function isEven(n){
     if(n<0){
@@ -51,7 +51,7 @@ function isEven(n){
 
 // Bean Counting
 
-//Misunderstood and returned array, so not it
+//Misunderstood and returned string, so not it
 
 let x = ""
 function countBs(string){
