@@ -1,0 +1,100 @@
+// The Sum of a range
+
+// Here is the range and sum mixed together
+
+function range(start, end){
+  let arr = [];
+  for(let i = start; i <= end; i++){
+      arr.push(start);
+      start += (i+1);
+    }
+    return arr;
+}
+
+// Here is the range function
+
+function range(start, end){
+  let arr = [];
+  for(let i = start; i <= end; i++){
+     arr.push(i);
+  }
+    return arr;
+}
+
+//Here is the sum function
+
+function sum(arr){
+    let x = 0;
+    for(let i = 0; i < arr.length; i++){
+        x == arr[i];
+        x += (i+1);
+    }
+    return x;
+}
+console.log(sum(range(1, 10)));     //calling the two functions
+
+// Broken range with step value
+
+function range(start, end, step=1){
+  let arr = [];
+  if(start <= end){
+     for(let i = start; i <= end; step * i++){
+     arr.push(i);
+  }
+    return arr;
+}
+
+  else if(start > end){
+       for(let i = start; i >= end; step * i--){
+     arr.push(i);
+    } return arr;
+  }
+}
+
+// Working implementation of range with step value
+
+function range(start, end, step=1){
+  let arr = [];
+  
+  if(start <= end){
+     for(let i = start; i <= end; i=i + step){
+     arr.push(i);
+  }
+    return arr;
+}
+
+  else if(start > end){
+       for(let i = start; i >= end; i= i + step){
+     arr.push(i);
+    } return arr;
+  }
+} 
+
+// Reversing an array
+
+function reverseArray(arr){
+    let nArr = [];
+    for (let i = 0; i < arr.length; i++){
+      let x = arr[i];
+      nArr.unshift(x);
+    }return nArr;
+}
+
+// Reverse an array in Place
+
+function reverseArrayInPlace(arr){
+
+  for(let i = 0; i < Math.floor(arr.length/2); i++){
+    let x = arr[i];
+   
+    arr[i]=arr[arr.length-1-i];
+    arr[arr.length-1-i]=x;
+  }return arr;
+}
+
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+
+
+
